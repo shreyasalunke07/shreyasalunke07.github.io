@@ -13,13 +13,54 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <!-- Canvas for sparkles -->
+  <canvas id="sparkle-canvas"></canvas>
+
+  <!-- Background scene -->
+  <div class="scene" aria-hidden="true">
+
+    <!-- Sun -->
+    <div class="sun">
+      <div class="sun-core"></div>
+      <div class="rays">
+        <div class="ray"></div><div class="ray"></div><div class="ray"></div>
+        <div class="ray"></div><div class="ray"></div><div class="ray"></div>
+        <div class="ray"></div><div class="ray"></div>
+      </div>
+    </div>
+
+    <!-- Rainbow -->
+    <div class="rainbow">
+      <div class="band band-1"></div>
+      <div class="band band-2"></div>
+      <div class="band band-3"></div>
+      <div class="band band-4"></div>
+      <div class="band band-5"></div>
+      <div class="band band-6"></div>
+      <div class="band band-7"></div>
+    </div>
+
+    <!-- Clouds -->
+    <div class="cloud cloud-1">
+      <div class="puff p1"></div><div class="puff p2"></div><div class="puff p3"></div>
+    </div>
+    <div class="cloud cloud-2">
+      <div class="puff p1"></div><div class="puff p2"></div><div class="puff p3"></div>
+    </div>
+    <div class="cloud cloud-3">
+      <div class="puff p1"></div><div class="puff p2"></div><div class="puff p3"></div>
+    </div>
+
+  </div>
+
   <div class="page-shell">
     <header class="hero">
       <p class="eyebrow">Personal Website</p>
       <div class="owl-row" aria-hidden="true">
-        <span class="owl-badge">Amazon Rainforest</span>
-        <span class="owl-badge">Lush + Wild</span>
-        <span class="owl-badge">Deep Jungle Vibes</span>
+        <span class="owl-badge">Sunshine</span>
+        <span class="owl-badge">Rainbows</span>
+        <span class="owl-badge">Good Vibes Only</span>
       </div>
       <h1>Hi, I'm Shreya.</h1>
       <p class="intro">
@@ -30,6 +71,14 @@
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
+        <a href="https://linkedin.com/in/shreyasalunke/" target="_blank" rel="noopener" class="btn-linkedin">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:-2px;margin-right:5px"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          LinkedIn
+        </a>
+        <a href="Shreya_Salunke_Resume.pdf" target="_blank" rel="noopener" class="btn-resume">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:5px"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+          Resume
+        </a>
       </nav>
     </header>
 
@@ -89,18 +138,67 @@
       <section id="contact" class="card">
         <p class="section-label">Contact</p>
         <h2>How to reach me</h2>
-        <p>
-          Add your email, social links, or anything else you'd like visitors to use to
-          get in touch.
-        </p>
-        <ul class="contact-list">
-          <li>Email: yourname@example.com</li>
-          <li>Instagram: @yourhandle</li>
-          <li>Location: New York, NY</li>
-        </ul>
+        <p>Feel free to connect — I'd love to chat!</p>
+        <div class="contact-links">
+          <a href="https://linkedin.com/in/shreyasalunke/" target="_blank" rel="noopener" class="contact-btn contact-btn-linkedin">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            LinkedIn
+          </a>
+          <a href="Shreya_Salunke_Resume.pdf" target="_blank" rel="noopener" class="contact-btn contact-btn-resume">
+            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+            View Resume
+          </a>
+        </div>
       </section>
 
     </main>
   </div>
+
+  <script>
+    // Sparkles
+    const canvas = document.getElementById('sparkle-canvas');
+    const ctx = canvas.getContext('2d');
+
+    function resize() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    resize();
+    window.addEventListener('resize', resize);
+
+    const colors = ['#ffe066', '#ff9ee0', '#a0d8ff', '#b5f5b5', '#ffb347', '#d4a4ff'];
+    const sparkles = Array.from({ length: 80 }, () => ({
+      x: Math.random() * window.innerWidth,
+      y: Math.random() * window.innerHeight,
+      r: Math.random() * 2.5 + 0.5,
+      color: colors[Math.floor(Math.random() * colors.length)],
+      speed: Math.random() * 0.6 + 0.2,
+      twinkle: Math.random() * Math.PI * 2,
+    }));
+
+    function draw() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      sparkles.forEach(s => {
+        s.twinkle += 0.05;
+        const alpha = (Math.sin(s.twinkle) + 1) / 2;
+        ctx.beginPath();
+        ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+        ctx.fillStyle = s.color.replace(')', `, ${alpha * 0.8})`).replace('rgb', 'rgba').replace('#', '');
+        // simpler approach:
+        ctx.globalAlpha = alpha * 0.8;
+        ctx.fillStyle = s.color;
+        ctx.fill();
+        ctx.globalAlpha = 1;
+
+        s.y -= s.speed;
+        if (s.y < -4) {
+          s.y = canvas.height + 4;
+          s.x = Math.random() * canvas.width;
+        }
+      });
+      requestAnimationFrame(draw);
+    }
+    draw();
+  </script>
 </body>
 </html>
